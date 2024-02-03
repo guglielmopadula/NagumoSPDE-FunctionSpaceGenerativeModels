@@ -1,4 +1,4 @@
-# GANO
+# Function Space Generative Models
 An attempt to learn a [Nagumo Stochastic Partial Differential Equation](https://github.com/guglielmopadula/NagumoSPDE) by using  generative models on function space.
 The GANO code is a variation of the [original repository](https://github.com/neuraloperator/GANO).
 
