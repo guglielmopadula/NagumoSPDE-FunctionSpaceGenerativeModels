@@ -4,7 +4,7 @@ import torch
 from tqdm import trange
 from torchdiffeq import odeint
 import torch
-from stochasticheatequation import StochasticHeatEquation
+from nagumospde import NagumoSPDE
 import matplotlib.pyplot as plt
 flows = []
 num_layers = 128
@@ -67,7 +67,7 @@ class ScoreFunction(nn.Module):
 
 i=np.load("xi.npy")
 
-real_data=StochasticHeatEquation(100).train_loader.dataset[:][0].numpy()
+real_data=NagumoSPDE(100).train_loader.dataset[:][0].numpy()
 # Load data
 import numpy as np
 latent=np.load("coeff.npy")

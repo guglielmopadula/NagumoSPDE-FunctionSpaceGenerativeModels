@@ -2,7 +2,7 @@ from torch import nn
 import numpy as np
 import torch
 from tqdm import trange
-from stochasticheatequation import StochasticHeatEquation
+from nagumospde import NagumoSPDE
 import normflows as nf
 import torch
 base = nf.distributions.base.DiagGaussian(600,trainable=False)
@@ -24,7 +24,7 @@ for i in range(num_layers):
 model = nf.NormalizingFlow(base, flows)
 xi=np.load("xi.npy")
 
-real_data=StochasticHeatEquation(100).train_loader.dataset[:][0].numpy()
+real_data=NagumoSPDE(100).train_loader.dataset[:][0].numpy()
 # Load data
 import numpy as np
 latent=np.load("coeff.npy")

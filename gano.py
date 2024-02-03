@@ -6,11 +6,11 @@ import torch.nn as nn
 from random_fields import *
 from tqdm import trange
 from neuralop.models import FNO1d
-from stochasticheatequation import StochasticHeatEquation
+from nagumospde import NagumoSPDE
 torch.manual_seed(0)
 np.random.seed(0)
 batch_size=100
-data=StochasticHeatEquation(100)
+data=NagumoSPDE(100)
 real_data=data.train_loader.dataset[:][0].numpy()
 train_loader=data.train_loader
 res=64

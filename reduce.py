@@ -1,6 +1,6 @@
-from stochasticheatequation import StochasticHeatEquation
+from nagumospde import NagumoSPDE
 import numpy as np
-u_data=StochasticHeatEquation(100).train_loader.dataset[:][0].numpy()
+u_data=NagumoSPDE(100).train_loader.dataset[:][0].numpy()
 u_data=u_data.reshape(600,64)
 covariance=u_data@((u_data.T))/600
 U,S,V=np.linalg.svd(covariance)

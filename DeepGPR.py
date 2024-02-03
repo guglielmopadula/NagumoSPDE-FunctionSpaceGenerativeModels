@@ -2,13 +2,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-from stochasticheatequation import StochasticHeatEquation
+from nagumospde import NagumoSPDE
 from tqdm import trange
 
 torch.manual_seed(0)
 np.random.seed(0)
 batch_size=100
-data=StochasticHeatEquation(100)
+data=NagumoSPDE(100)
 x=data.x
 real_data=data.train_loader.dataset[:][0].reshape(600,-1)
 train_loader=data.train_loader
